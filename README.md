@@ -97,7 +97,7 @@ bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
 
 You could refer to the inference section and download the models below to reproduce the result in our paper.
 
-- ATP_SRL_AMR2.0 [comming soon]()
+- ATP_SRL_AMR2.0 [Google Drive](https://drive.google.com/file/d/1MUJ6tW_0MY9SWAbRVEWXHzWYxx9nDx9W/view?usp=sharing)
 
 ```sh
 #scores
