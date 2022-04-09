@@ -6,6 +6,10 @@ We have released the trained models and the test scripts. We are working on merg
 ## Brief Introduction
 SOTA AMR Parsing model using only 40k extra data. **Rank 1st** model on Structrual-Related Scores (SRL and Reentrancy). Paper is coming soon.
 
+<div align=center>
+<img width="600" src="./img.png"/>
+</div>
+
 ## Requriments
 
 Build envrionment for Spring
@@ -48,7 +52,7 @@ bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
 ```
 ## Models Release
 
-- ATP_SRL_AMR2.0 [path]
+- ATP_SRL_AMR2.0 [comming soon](www.baidu.com)
 
 ```sh
 #scores
@@ -63,6 +67,6 @@ Reentrancies -> P: 0.756 , R: 0.744 , F: 0.750
 SRL -> P: 0.840 , R: 0.830 , F: 0.835
 ```
 
-- ATP_SRL_Ensemble_AMR2.0
-- ATP_SRL_AMR3.0
-- ATP_DP_AMR2.0
+- ATP_SRL_Ensemble_AMR2.0 [comming soon](www.baidu.com)
+- ATP_SRL_AMR3.0 [comming soon](www.baidu.com)
+- ATP_DP_AMR2.0 [comming soon](www.baidu.com)
