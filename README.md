@@ -97,7 +97,7 @@ bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
 
 You could refer to the inference section and download the models below to reproduce the result in our paper.
 
-- ATP_SRL_AMR2.0 [comming soon](www.baidu.com)
+- ATP_SRL_AMR2.0 [comming soon]()
 
 ```sh
 #scores
@@ -112,6 +112,6 @@ Reentrancies -> P: 0.756 , R: 0.744 , F: 0.750
 SRL -> P: 0.840 , R: 0.830 , F: 0.835
 ```
 
-- ATP_SRL_Ensemble_AMR2.0 [comming soon](www.baidu.com)
-- ATP_SRL_AMR3.0 [comming soon](www.baidu.com)
-- ATP_DP_AMR2.0 [comming soon](www.baidu.com)
+- ATP_SRL_Ensemble_AMR2.0 [comming soon]
+- ATP_SRL_AMR3.0 [comming soon]
+- ATP_DP_AMR2.0 [comming soon]
