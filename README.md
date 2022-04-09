@@ -95,7 +95,7 @@ bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
 
 ## Models Release
 
-You could refer to the inference section and the models below to reproduce the result in our paper.
+You could refer to the inference section and download the models below to reproduce the result in our paper.
 
 - ATP_SRL_AMR2.0 [comming soon](www.baidu.com)
 
