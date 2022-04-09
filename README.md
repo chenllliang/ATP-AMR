@@ -94,7 +94,7 @@ conda activate blink37
 # you should download the blink model according to the readme in blink repo
 bash blink.sh PARSED_AMR BLINK_MODEL_DIR
 
-cd amr-evaluation
+cd ../amr-evaluation
 bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
 ```
 
