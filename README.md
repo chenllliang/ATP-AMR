@@ -38,6 +38,59 @@ cd BLINK
 pip install -r requirements.txt
 pip install -e .
 ```
+## Preprocess and AMRization
+
+coming soon ~
+
+## Training 
+
+(cleaning code and data in progress)
+
+```bash
+cd spring/bin
+```
+
+- Train ATP-DP Task
+
+```bash
+python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_dp.yaml
+```
+
+- Train ATP-SRL Task
+```bash
+python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml  # yes, the direction is also dp
+```
+
+
+- Train AMR Task based intermediate SRL/DP Task
+
+```
+python train.py --direction amr --checkpoint PATH_TO_SRL_DP_MODEL --config ../configs/config.yaml
+```
+
+- Train AMR Task in multitask Manner
+
+```bash
+python train.py --direction multi --config ../configs/config_multitask.yaml
+```
+
+
+## Inference
+
+```bash
+conda activate spring
+
+cd script
+bash intermediate_eval.sh MODEL_PATH 
+# it will generate the gold and the parsed amr files, you should the change the path of AMR2.0/3.0 Dataset in the script.
+
+conda activate blink37 
+# you should download the blink model according to the readme in blink repo
+bash blink.sh PARSED_AMR BLINK_MODEL_DIR
+
+cd amr-evaluation
+bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
+```
 
 ## Models Release
 
@@ -59,21 +112,3 @@ SRL -> P: 0.840 , R: 0.830 , F: 0.835
 - ATP_SRL_Ensemble_AMR2.0 [comming soon](www.baidu.com)
 - ATP_SRL_AMR3.0 [comming soon](www.baidu.com)
 - ATP_DP_AMR2.0 [comming soon](www.baidu.com)
-
-## Inference
-
-```bash
-conda activate spring
-
-cd script
-bash intermediate_eval.sh MODEL_PATH 
-# it will generate the gold and the parsed amr files, you should the change the path of AMR2.0/3.0 Dataset in the script.
-
-conda activate blink37 
-# you should download the blink model according to the readme in blink repo
-bash blink.sh PARSED_AMR BLINK_MODEL_DIR
-
-cd amr-evaluation
-bash evaluation.sh PARSED_AMR.blink GOLD_AMR_PATH
-```
-
