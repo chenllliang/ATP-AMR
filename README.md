@@ -58,17 +58,18 @@ python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/conf
 
 - Train ATP-SRL Task
 ```bash
-python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml  # yes, the direction is also dp
+python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml 
+# yes, the direction is also dp
 ```
 
 
-- Train AMR Task based intermediate SRL/DP Task
+- Train AMR Task based on intermediate ATP-SRL/DP Model
 
 ```
 python train.py --direction amr --checkpoint PATH_TO_SRL_DP_MODEL --config ../configs/config.yaml
 ```
 
-- Train AMR Task in multitask Manner
+- Train AMR,SRL,DP Task in multitask Manner
 
 ```bash
 python train.py --direction multi --config ../configs/config_multitask.yaml
