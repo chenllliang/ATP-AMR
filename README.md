@@ -17,7 +17,7 @@ From an empirical perspective, we propose a principled method to choose, reform,
 
 
 <div align=center>
-<img width=600 src="./img.png"/>
+<img width=800 src="./img.png"/>
 </div>
 
 ## Requriments
