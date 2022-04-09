@@ -2,7 +2,12 @@
 
 Hi this is the source code of our paper "ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs" accepted by findings of NAACL 2022.
 
-We have released the trained models and the test scripts. We are working on merging our training/preprocessing code with the amrlib repo. 
+### News
+ - 🎈 We have released the trained models and the test scripts. 2022.04.10
+
+### Todos
+ - 🎯 We are working on merging our training/preprocessing code with the amrlib repo. 
+ - 🎯 Release Camera Ready Paper
 ## Brief Introduction
 TLDR: SOTA AMR Parsing single model using only 40k extra data. **Rank 1st** model on Structrual-Related Scores (SRL and Reentrancy). Paper is coming soon.
 
