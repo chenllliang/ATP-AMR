@@ -111,7 +111,3 @@ Wikification -> P: 0.849 , R: 0.824 , F: 0.836
 Reentrancies -> P: 0.756 , R: 0.744 , F: 0.750
 SRL -> P: 0.840 , R: 0.830 , F: 0.835
 ```
-
-- ATP_SRL_Ensemble_AMR2.0 [comming soon]
-- ATP_SRL_AMR3.0 [comming soon]
-- ATP_DP_AMR2.0 [comming soon]
