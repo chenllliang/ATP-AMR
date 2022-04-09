@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: spring-amr
+Version: 1.0
+Summary: Parse sentences into AMR graphs and generate sentences from AMR graphs without breaking a sweat!
+Home-page: https://github.com/SapienzaNLP/spring
+Author: Michele Bevilacqua, Rexhina Blloshmi and Roberto Navigli
+Author-email: {bevilacqua,blloshmi,navigli}@di.uniroma1.it
+License: CC BY-NC-SA 4.0
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+

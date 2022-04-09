@@ -1,0 +1,101 @@
+export CUDA_VISIBLE_DEVICES=4
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_pretrain.yaml > ../logs/dp_444 2>&1 & 
+
+dp_lemma_pretrain:
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_lemma_pretrain.yaml > ../logs/0927dp_lemma_pretrain_123.txt 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_lemma_rr_no_pretrain.yaml > ../logs/0929_dp_lemma_pretrain_from_raw.txt 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_lemma_rr_pretrain.yaml > ../logs/1011_40k_dp_noPointer_rr_childF0.3_seed123.txt 2>&1 & 
+
+nohup python train.py --direction dp --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/38_1004_wmt_dp_lemma_pretrain_rr_123_bleu/best-bleu_checkpoint_12_0.3067.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_lemma_rr_pretrain.yaml > ../logs/1005_dp_from_200k_123_bart_large_40k_dp.txt 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_pretrain_with_pointer.yaml > ../logs/1010_dp_from_40k_bart_large_with_pointer_seed123 2>&1 & 
+
+
+dp_lemma_finetune:
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/73_1011_40k_dp_noPointer_remove_det,punct_childF0.3_seed123/best-bleu_checkpoint_25_0.4625.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1019_dp_lemma_finetune_0.00005_1_beam5 2>&1 & 
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/67_dp_40k_pointer_childF_0.3_seed1_no_punct/best-bleu_checkpoint_8_0.1316.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1011_amr_from40kdp_withpointer_nopunct_childF0.3_seed1_childF0.3_seed123 2>&1 & 
+
+#/home/cl/AMR_Multitask_Inter/spring/runs/43_1005_dp_from_200k_123_bart_large_40k_dp/best-bleu_checkpoint_18_0.3528.pt 40+200k
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/43_1005_dp_from_200k_123_bart_large_40k_dp/best-bleu_checkpoint_18_0.3528.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1005_from200k+40k_dp_3_bart_large 2>&1 & 
+
+
+raw finetune
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1001_large_raw_pretrain_0.00005_1_warmup500_new 2>&1 & 
+
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config_no_pretrain.yaml > ../logs/baseline_no_pretrain 2>&1 &
+
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config_no_pretrain.yaml > ../logs/base_baseline_no_pretrain 2>&1 &
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/67_dp_40k_pointer_childF_0.3_seed1_no_punct/best-bleu_checkpoint_8_0.1316.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1012_amr3.0_from40kdp_withpointer_nopunct_childF0.3_seed123_childF0.3_seed123.txt 2>&1 & 
+
+
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config_no_pretrain.yaml > ../logs/1001_raw_base_0.00005_1_warmup1000 2>&1 &
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/18_dp_lemma_pretrain_rr_123_bleu/best-bleu_checkpoint_17_0.4042.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config_childTune.yaml > ../logs/1007_large_amr_childTuneF_p0.3_from_40k_seed123.txt 2>&1 & 
+
+config_childTune
+
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config_childTuningD.yaml > ../logs/1006_large_amr_childTuneD_bart_p0.3 2>&1 & 
+
+
+srl_childtune
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml > ../logs/1021_srl_arg_reduction_pointer_reen_childF_0.3_seed123 2>&1 & 
+
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/132_1023_srl_pointer_reen_childF_0.3_seed888(bleu)/best-bleu_checkpoint_14_84.5815.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1023_amr2.0_from_only_reen_srl_childF0.3_seed123.txt 2>&1 & 
+##keep_save
+
+
+#new srl
+nohup python train.py --direction amr  --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/145_1122_srl_pointer_Reentrancy_childF_0.3_seed888\(bleu\)/best-bleu_checkpoint_3_76.9009.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config_new.yaml > ../logs/1123_amr2.0_from_only_reen_srl_childF0.3_seed123.txt 2>&1 & 
+
+
+
+nohup python train.py --direction amr nohup python train.py --direction amr  --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/154_1125_srl_pointer_Reentrancy_childF_0.3_seed888\(bleu\)/best-bleu_checkpoint_3_72.8810.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config_new.yaml >../logs/1125_2.0_srl_only_rr_and_plain_amr_888_beam5_dp_0.25_2500_linear.txt 2>&1 &
+
+nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/99_1017_Summary_cnndm_seed456/best-bleu_checkpoint_23_0.3980.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1017_amr2.0_from_cnndm_seed123.txt 2>&1 & 
+
+
+srl from dp:
+
+nohup python train.py --direction dp --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/67_dp_40k_pointer_childF_0.3_seed1_no_punct/best-bleu_checkpoint_8_0.1316.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml > ../logs/1014_srl_trival_pointer_childF_0.3_seed123_fromdp40k_67 2>&1 & 
+
+
+dp from srl:
+
+nohup python train.py --direction dp --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/79_1014_srl_trival_pointer_childF_0.3_seed123/best-bleu_checkpoint_9_7.6684.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/dp_pretrain_with_pointer.yaml > ../logs/dp_40k_pointer_nochild_no_punct_seed123_from_srl 2>&1 & 
+
+
+MT
+
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/1017_MT_EN->DE_seed456 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/1017_MT_DE->EN_seed456 2>&1 & `
+
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/0112_MT_DE->EN_200k_seed456 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/0112_MT_DE->EN_400k_seed456 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/0112_MT_EN->DE_400k_seed456 2>&1 & 
+
+nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_MT.yaml > ../logs/0112_MT_EN->DE_400k_seed456 2>&1 & 
+
+
+nohup python train.py --direction amr  --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/98_0112_MT_EN_DE_80K_seed456/best-bleu_checkpoint_5_82.8834.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml >../logs/amr_from80k_en_de.txt 2>&1 &
+
+Multitask training:
+
+nohup python train.py --direction multi --config /home/cl/AMR_Multitask_Inter/spring/configs/config_multitask.yaml >../logs/1021_multitask_srl_dp_amr_seed123 2>&1 & 
+
+
+
+DOG:
+nohup python train.py --direction amr --config /home/cl/AMR_Multitask_Inter/spring/configs/config_dog.yaml >../logs/dog_1209_base_seed1_warmup1_lr5e-5 2>&1 & 
+

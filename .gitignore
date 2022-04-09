@@ -1,0 +1,3 @@
+amrization/datasets/**
+models/AMR_2/**
+*.pt
