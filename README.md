@@ -3,7 +3,7 @@
 Hi this is the source code of our paper "ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs" accepted by findings of NAACL 2022.
 
 ### News
- - 🎈 We have released the trained models and the test scripts. 2022.04.10
+ - 🎈 We have released four trained models and the test scripts. 2022.04.10
 
 ### Todos
  - 🎯 We are working on merging our training/preprocessing code with the amrlib repo. 
