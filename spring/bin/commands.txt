@@ -48,6 +48,7 @@ nohup python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/sprin
 
 
 nohup python train.py --direction amr --checkpoint /home/cl/AMR_Multitask_Inter/spring/runs/132_1023_srl_pointer_reen_childF_0.3_seed888(bleu)/best-bleu_checkpoint_14_84.5815.pt --config /home/cl/AMR_Multitask_Inter/spring/configs/config.yaml > ../logs/1023_amr2.0_from_only_reen_srl_childF0.3_seed123.txt 2>&1 & 
+
 ##keep_save
 
 
