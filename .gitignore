@@ -1,3 +1,5 @@
-amrization/datasets/**
-models/AMR_2/**
+amrization/SRL/**
+models/**
 *.pt
+Datasets/**
+BLINK/models/**

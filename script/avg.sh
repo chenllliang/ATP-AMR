@@ -1,1 +1,0 @@
-python /home/cl/fairseq/scripts/average_checkpoints.py --inputs $1 --output $1/avg3.pt --num-epoch-checkpoints 3

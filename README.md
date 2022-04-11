@@ -31,7 +31,7 @@ pip install -e .
 # we use torch==1.11.0 and A40 GPU. lower torch version is fine.
 ```
 
-Build envrionment for BLINK, Note that BLINK has some requirements conflicts with Spring, while the blinking script relies on both repos. So we build it upon Spring.
+Build envrionment for BLINK to do entity linking, Note that BLINK has some requirements conflicts with Spring, while the blinking script relies on both repos. So we build it upon Spring.
 ```bash
 conda create -n blink37 -y python=3.7 && conda activate blink37
 
@@ -39,9 +39,10 @@ cd spring
 pip install -r requirements.txt
 pip install -e .
 
-cd BLINK
+cd ../BLINK
 pip install -r requirements.txt
 pip install -e .
+bash download_blink_models.sh
 ```
 ## Preprocess and AMRization
 
@@ -91,7 +92,7 @@ bash intermediate_eval.sh MODEL_PATH
 # it will generate the gold and the parsed amr files, you should the change the path of AMR2.0/3.0 Dataset in the script.
 
 conda activate blink37 
-# you should download the blink model according to the readme in blink repo
+# you should download the blink models according to the ATP/BLINK/download_blink_models.sh in BLINK repo
 bash blink.sh PARSED_AMR BLINK_MODEL_DIR
 
 cd ../amr-evaluation
@@ -106,7 +107,7 @@ You could refer to the inference section and download the models below to reprod
 
 ```sh
 #scores
-Smatch -> P: 0.8587, R: 0.8437, F: 0.851
+Smatch -> P: 0.858, R: 0.844, F: 0.851
 Unlabeled -> P: 0.890, R: 0.874, F: 0.882
 No WSD -> -> P: 0.863, R: 0.848, F: 0.855
 Concepts -> P: 0.914 , R: 0.895 , F: 0.904
@@ -115,4 +116,47 @@ Negations -> P: 0.756 , R: 0.758 , F: 0.757
 Wikification -> P: 0.849 , R: 0.824 , F: 0.836
 Reentrancies -> P: 0.756 , R: 0.744 , F: 0.750
 SRL -> P: 0.840 , R: 0.830 , F: 0.835
+```
+
+- ATP_SRL_D_AMR2.0 [Google Drive](https://drive.google.com/file/d/1sxKOjkkZ9MqveF6yMuMT5GfuvPVJcgKH/view?usp=sharing)
+
+```sh
+#scores
+Smatch -> P: 0.859, R: 0.844, F: 0.852
+Unlabeled -> P: 0.891, R: 0.876, F: 0.883
+No WSD -> -> P: 0.863, R: 0.849, F: 0.856
+Concepts -> P: 0.917 , R: 0.898 , F: 0.907
+Named Ent. -> P: 0.942 , R: 0.921 , F: 0.931
+Negations -> P: 0.742 , R: 0.755 , F: 0.749
+Wikification -> P: 0.851 , R: 0.833 , F: 0.842
+Reentrancies -> P: 0.753 , R: 0.741 , F: 0.747
+SRL -> P: 0.837 , R: 0.830 , F: 0.833
+```
+
+- ATP_SRL_D_AMR2.0_Ensemble [Google Drive](https://drive.google.com/file/d/1cj216t9Qc1_D24f9Cs-jTv4z_fMPInER/view?usp=sharing)
+```sh
+#scores
+Smatch -> P: 0.859, R: 0.847, F: 0.853
+Unlabeled -> P: 0.891, R: 0.877, F: 0.884
+No WSD -> -> P: 0.863, R: 0.851, F: 0.857
+Concepts -> P: 0.917 , R: 0.899 , F: 0.908
+Named Ent. -> P: 0.938 , R: 0.917 , F: 0.927
+Negations -> P: 0.740 , R: 0.755 , F: 0.747
+Wikification -> P: 0.849 , R: 0.830 , F: 0.840
+Reentrancies -> P: 0.755 , R: 0.748 , F: 0.751
+SRL -> P: 0.837 , R: 0.836 , F: 0.836
+```
+
+- ATP_SRL_AMR3.0_Ensemble [Google Drive](https://drive.google.com/file/d/1vtmkNVAZc8caPxAfwxn4pjvD4ll1uzjG/view?usp=sharing)
+```sh
+#scores
+Smatch -> P: 0.844, R: 0.836, F: 0.840
+Unlabeled -> P: 0.875, R: 0.866, F: 0.871
+No WSD -> -> P: 0.849, R: 0.840, F: 0.845
+Concepts -> P: 0.908 , R: 0.892 , F: 0.900
+Named Ent. -> P: 0.900 , R: 0.879 , F: 0.889
+Negations -> P: 0.734 , R: 0.729 , F: 0.731
+Wikification -> P: 0.816 , R: 0.798 , F: 0.807
+Reentrancies -> P: 0.729 , R: 0.749 , F: 0.739
+SRL -> P: 0.822 , R: 0.830 , F: 0.826
 ```

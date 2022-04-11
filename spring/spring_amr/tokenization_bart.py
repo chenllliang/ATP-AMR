@@ -14,7 +14,7 @@ from spring_amr.linearization import AMRTokens, AMRLinearizer
 from spring_amr.c_penman import encode
 
 
-dp_edges = [i.strip() for i in open("/home/cl/AMR_Multitask_Inter/Dataset/DP/seq2seq/edges.txt","r").readlines()]
+dp_edges = [i.strip() for i in open("../vocabs/dp_edges.txt","r").readlines()]
 print(dp_edges)
 
 
@@ -60,7 +60,7 @@ class MultiTaskAmrTokenizer(BartTokenizer):
                 tokens.append(tok)
 
         # add your vocab for one pretrain_task        
-        for tok in Path("/home/cl/AMR_Multitask_Inter/Dataset/DP/seq2seq/edges.txt").read_text().strip().splitlines():
+        for tok in Path("../vocabs/dp_edges.txt").read_text().strip().splitlines():
             tokens.append(tok)
         
         for tok in Path(ROOT/'data/vocab/additions.txt').read_text().strip().splitlines():
@@ -340,7 +340,7 @@ class AMRBartTokenizer(BartTokenizer):
                 tokens.append(tok)
 
         # add your vocab for one pretrain_task        
-        for tok in Path("/home/cl/AMR_Multitask_Inter/Dataset/DP/seq2seq/edges.txt").read_text().strip().splitlines():
+        for tok in Path("../vocabs/dp_edges.txt").read_text().strip().splitlines():
             tokens.append(tok)
         
         for tok in Path(ROOT/'data/vocab/additions.txt').read_text().strip().splitlines():
