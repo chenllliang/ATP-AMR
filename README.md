@@ -163,4 +163,4 @@ SRL -> P: 0.822 , R: 0.830 , F: 0.826
 ```
 
 ## Acknowledgements
-We thank all people/group that share open-source scripts for this project, which include the authors for SPRING, amrlib, smatch, amr-evaluation and all other repos.
+We thank all people/group that share open-source scripts for this project, which include the authors for SPRING, amrlib, smatch, amr-evaluation, BLINK and all other repos.
