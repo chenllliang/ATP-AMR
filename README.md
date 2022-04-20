@@ -160,3 +160,6 @@ Wikification -> P: 0.816 , R: 0.798 , F: 0.807
 Reentrancies -> P: 0.729 , R: 0.749 , F: 0.739
 SRL -> P: 0.822 , R: 0.830 , F: 0.826
 ```
+
+## Acknowledgements
+We thank all people/group that share open-source scripts for this project, which include the authors for SPRING, amrlib, smatch, amr-evaluation and all other repos.
