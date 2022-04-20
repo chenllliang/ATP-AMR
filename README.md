@@ -3,14 +3,14 @@
 Hi this is the source code of our paper "ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs" accepted by findings of NAACL 2022.
 
 ### News
- - 🎈 Release Camera Ready Paper. [ArXiv](https://arxiv.org/abs/2204.08875) 2022.04.20
+ - 🎈 Release camera ready paper. [ArXiv](https://arxiv.org/abs/2204.08875) 2022.04.20
  - 🎈 We have released four trained models and the test scripts. 2022.04.10
 
 ### Todos
  - 🎯 We are working on merging our training/preprocessing code with the amrlib repo. 
 
 ## Brief Introduction
-TL;DR: SOTA AMR Parsing single model using only 40k extra data. **Rank 1st** model on Structrual-Related Scores (SRL and Reentrancy). Paper is coming soon.
+TL;DR: SOTA AMR Parsing single model using only 40k extra data. **Rank 1st** model on Structrual-Related Scores (SRL and Reentrancy).
 
 As Abstract Meaning Representation (AMR) implicitly involves compound semantic annotations, we hypothesize auxiliary tasks which are semantically or formally related can better enhance AMR parsing. With carefully designed control experiments, we find that 1) Semantic role labeling (SRL) and dependency parsing (DP), would bring much more significant performance gain than unrelated tasks in the text-to-AMR transition. 2) To make a better fit for AMR, data from auxiliary tasks should be properly ``AMRized'' to PseudoAMR before training. 3) Intermediate-task training paradigm outperforms multitask learning when introducing auxiliary tasks to AMR parsing. 
 
