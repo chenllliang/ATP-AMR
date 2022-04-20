@@ -164,3 +164,27 @@ SRL -> P: 0.822 , R: 0.830 , F: 0.826
 
 ## Acknowledgements
 We thank all people/group that share open-source scripts for this project, which include the authors for SPRING, amrlib, smatch, amr-evaluation, BLINK and all other repos.
+
+## Citation
+If you feel our work helpful, please kindly cite
+
+```bib
+@misc{https://doi.org/10.48550/arxiv.2204.08875,
+  doi = {10.48550/ARXIV.2204.08875},
+  
+  url = {https://arxiv.org/abs/2204.08875},
+  
+  author = {Chen, Liang and Wang, Peiyi and Xu, Runxin and Liu, Tianyu and Sui, Zhifang and Chang, Baobao},
+  
+  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+}
+
+```
