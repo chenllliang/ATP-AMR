@@ -163,7 +163,7 @@ SRL -> P: 0.822 , R: 0.830 , F: 0.826
 ```
 
 ## Acknowledgements
-We thank all people/group that share open-source scripts for this project, which include the authors for SPRING, amrlib, smatch, amr-evaluation, BLINK and all other repos.
+We thank all people/group that share open-source scripts for this project, which include the authors for [SPRING](https://github.com/SapienzaNLP/spring), [amrlib](https://github.com/bjascob/amrlib), [smatch](https://github.com/snowblink14/smatch), [amr-evaluation](https://github.com/mdtux89/amr-evaluation), [BLINK](https://github.com/facebookresearch/BLINK) and all other repos.
 
 ## Citation
 If you feel our work helpful, please kindly cite
