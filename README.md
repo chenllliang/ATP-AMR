@@ -1,5 +1,9 @@
 # ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/atp-amrize-then-parse-enhancing-amr-parsing/amr-parsing-on-ldc2017t10)](https://paperswithcode.com/sota/amr-parsing-on-ldc2017t10?p=atp-amrize-then-parse-enhancing-amr-parsing)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/atp-amrize-then-parse-enhancing-amr-parsing/amr-parsing-on-ldc2020t02)](https://paperswithcode.com/sota/amr-parsing-on-ldc2020t02?p=atp-amrize-then-parse-enhancing-amr-parsing)
+
 Hi this is the source code of our paper "ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs" accepted by findings of NAACL 2022.
 
 ### News
