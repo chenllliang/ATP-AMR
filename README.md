@@ -7,6 +7,7 @@
 Hi this is the source code of our paper "ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs" accepted by findings of NAACL 2022.
 
 ### News
+ - 🎈 Release slide (Chinese). [Google Drive](https://drive.google.com/drive/folders/1Xlhn798444NY2cN9rl-nWQWHxTEVkE0T?usp=sharing) 2022.07.08
  - 🎈 Release camera ready paper. [arXiv](https://arxiv.org/abs/2204.08875) 2022.04.20
  - 🎈 We have released four trained models and the test scripts. 2022.04.10
 
