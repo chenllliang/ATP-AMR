@@ -31,7 +31,7 @@ From an empirical perspective, we propose a principled method to choose, reform,
 Build envrionment for Spring
 ```bash
 cd spring
-conda create -n spring python=3.7
+conda create -n spring python=3.7 && conda activate spring
 pip install -r requirements.txt
 pip install -e .
 # we use torch==1.11.0 and A40 GPU. lower torch version is fine.
