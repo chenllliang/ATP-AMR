@@ -174,22 +174,21 @@ We thank all people/group that share open-source scripts for this project, which
 If you feel our work helpful, please kindly cite
 
 ```bib
-@misc{https://doi.org/10.48550/arxiv.2204.08875,
-  doi = {10.48550/ARXIV.2204.08875},
-  
-  url = {https://arxiv.org/abs/2204.08875},
-  
-  author = {Chen, Liang and Wang, Peiyi and Xu, Runxin and Liu, Tianyu and Sui, Zhifang and Chang, Baobao},
-  
-  keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {ATP: AMRize Then Parse! Enhancing AMR Parsing with PseudoAMRs},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+@inproceedings{chen-etal-2022-atp,
+    title = "{ATP}: {AMR}ize Then Parse! Enhancing {AMR} Parsing with {P}seudo{AMR}s",
+    author = "Chen, Liang  and
+      Wang, Peiyi  and
+      Xu, Runxin  and
+      Liu, Tianyu  and
+      Sui, Zhifang  and
+      Chang, Baobao",
+    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2022",
+    month = jul,
+    year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.findings-naacl.190",
+    pages = "2482--2496",
+    abstract = "As Abstract Meaning Representation (AMR) implicitly involves compound semantic annotations, we hypothesize auxiliary tasks which are semantically or formally related can better enhance AMR parsing. We find that 1) Semantic role labeling (SRL) and dependency parsing (DP), would bring more performance gain than other tasks e.g. MT and summarization in the text-to-AMR transition even with much less data. 2) To make a better fit for AMR, data from auxiliary tasks should be properly {``}AMRized{''} to PseudoAMR before training. Knowledge from shallow level parsing tasks can be better transferred to AMR Parsing with structure transform. 3) Intermediate-task learning is a better paradigm to introduce auxiliary tasks to AMR parsing, compared to multitask learning. From an empirical perspective, we propose a principled method to involve auxiliary tasks to boost AMR parsing. Extensive experiments show that our method achieves new state-of-the-art performance on different benchmarks especially in topology-related scores. Code and models are released at \url{https://github.com/PKUnlp-icler/ATP}.",
 }
-
 ```
