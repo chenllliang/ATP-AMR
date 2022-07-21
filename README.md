@@ -56,8 +56,6 @@ coming soon ~
 
 ## Training 
 
-(cleaning code and data in progress)
-
 ```bash
 cd spring/bin
 ```
