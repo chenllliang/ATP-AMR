@@ -52,7 +52,18 @@ bash download_blink_models.sh
 ```
 ## Preprocess and AMRization
 
-coming soon ~
+- AMRization for SRL with reentrancy restoration
+
+```bash
+cd amrization
+unzip amrization.zip  # OntoNotes 5.0 and amrization code
+cd amrization
+
+python get_srl.py # get the linearized srl after amrized
+python split_train_dev_test.py  # get the train-val split of srl dataset
+
+```
+
 
 ## Training 
 
@@ -60,16 +71,11 @@ coming soon ~
 cd spring/bin
 ```
 
-- Train ATP-DP Task
-
-```bash
-python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_dp.yaml
-```
 
 - Train ATP-SRL Task
 ```bash
 python train.py --direction dp --config /home/cl/AMR_Multitask_Inter/spring/configs/config_srl.yaml 
-# yes, the direction is also dp
+# yes, the direction is also dp, you should change the train/dev/test file path in the config_srl.yaml file
 ```
 
 
